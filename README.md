@@ -350,7 +350,59 @@ Nous étudieront donc que les sous-questions $b)$ et $c)$
 Nous nous permettrons de compléter les automates au besoin.
 
 $6.1)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
 
+    1((1))
+
+    ENTREE[ ] --> 1
+    1 --> SORTIE[ ]
+
+
+
+    1 --a--> 1
+```
+
+$b)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+
+    ENTREE[ ] --> I --> SORTIE2[ ]
+    1 --> SORTIE[ ]
+
+
+    I --a--> 1
+    1 --a--> 1
+```
+$c)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+
+    ENTREE[ ] --> I
+    1 --> SORTIE[ ]
+
+
+    I --a--> 1
+    1 --a--> 1
+```
+
+<br>
+<br>
+
+$6.2)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -388,6 +440,69 @@ graph LR
     1 --a--> 2
     2 --b--> 1 
 ```
+$c)$ Il ne reconnaît pas le mot vide.
+
+<br>
+<br>
+
+$6.3)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> 1 --> SORTIE2[ ]
+    2 --> SORTIE[ ]
 
 
+
+    1 --a--> 2
+    2 --b--> 1
+```
+
+$b)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> I --> SORTIE2[ ]
+    2 --> SORTIE[ ]
+
+
+
+    I --a--> 2 
+
+    1 --a--> 2
+    2 --b--> 1 
+```
+$c)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> I
+    2 --> SORTIE[ ]
+
+
+
+    I --a--> 2 
+
+    1 --a--> 2
+    2 --b--> 1 
+```
 
