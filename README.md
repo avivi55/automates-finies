@@ -334,6 +334,8 @@ Soit $B$ = $n$*b, $n \in \N$
 
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
 
+![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
+
 Les états $\textcircled{1}$ et $\textcircled{3}$ sont inutile car inatteignable ou ne menant à rien.
 </br>
 </br>
