@@ -330,12 +330,12 @@ Les mots reconnus par l'automate (chemin inverse):
     ...
 }
 
-Soit $B$ = $n$*b, $n \in \mathbb{N}$
+Soit $B$ = $n$*b, $n \in \mathbb{N^+}$
 
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
 
 
-Les états $1$ et $3$ sont inutile car inatteignable ou ne menant à rien.
+Les états **1** et **3** sont inutile car inatteignable ou ne menant à rien.
 </br>
 </br>
 </br>
