@@ -37,7 +37,7 @@ graph LR
 
 ### 2
 
-(a)
+$a)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -66,7 +66,7 @@ graph LR
 </br>
 </br>
 
-(b)
+$b)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -93,7 +93,7 @@ graph LR
 
 ### 3
 
-(a)
+$a)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -114,7 +114,7 @@ graph LR
 </br>
 </br>
 
-(b)
+$b)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -140,7 +140,7 @@ graph LR
 
 Soit P = point( . )
 
-(c)
+$c)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -177,7 +177,7 @@ graph LR
 </br>
 
 
-(d)
+$d)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -215,7 +215,7 @@ graph LR
 </br>
 
 
-(e)
+$e)$
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -245,6 +245,34 @@ graph LR
 
 
 ### 4
+
+**Méthode de cours :**
+
+| 7n % 7 | 14n % 7 | 14n+1 % 7 |
+|:------:|:-------:|:---------:|
+|        |    0    |     1     |
+|        |         |           |
+|    0   |    0    |     1     |
+|    1   |    2    |     3     |
+|    2   |    4    |     5     |
+|    3   |    6    |     0     |
+|    4   |    1    |     2     |
+|    5   |    3    |     4     |
+|    6   |    5    |     6     |
+
+<br>
+
+Tableau de transition :
+| État |  0  |  1  |
+|:----:|:---:|:---:|
+|   0  |  0  |  1  |
+|   1  |  2  |  3  |
+|   2  |  4  |  5  |
+|   3  |  6  |  0  |
+|   4  |  1  |  2  |
+|   5  |  3  |  4  |
+|   6  |  5  |  6  |
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -272,6 +300,7 @@ graph LR
     2 --1--> 5
     
     3 --0--> 6
+    3 --1--> 0 
 
     4 --0--> 1
     4 --1--> 2
@@ -279,7 +308,30 @@ graph LR
     5 --0--> 3
     5 --1--> 4
     
-    
-    6 --0--> 5
     6 --1--> 6
+    6 --0--> 5
 ```
+</br>
+</br>
+</br>
+
+
+### 5
+
+$a)$
+
+Les mots reconnus par l'automate (chemin inverse):
+{
+    a,
+    ab,
+    bab,
+    abbb,
+    bbba,
+    ...
+}
+
+Soit $B$ = $n$*b, $n \in \N$
+
+Donc l'automate reconnait les mots de la formes :  $B$ a $B$
+
+Les états $\textcircled{1}$ et $\textcircled{3}$ sont inutile car inatteignable ou ne menant à rien.
