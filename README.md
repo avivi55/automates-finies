@@ -334,7 +334,8 @@ Soit $B$ = $n$*b, $n \in \mathbb{N}$
 
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
 
-Les états $\mathbb{\textcircled{1}}$ et $\mathbb{\textcircled{3}}$ sont inutile car inatteignable ou ne menant à rien.
+
+Les états $1$ et $3$ sont inutile car inatteignable ou ne menant à rien.
 </br>
 </br>
 </br>
