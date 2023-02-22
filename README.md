@@ -14,11 +14,11 @@ graph LR
     D((D))
     V((V)) 
 
-    START[ ] --> C 
-    C --> STOP[ ]
-    M --> STOP2[ ]
-    D --> STOP3[ ]
-    V--> STOP4[ ]
+    ENTREE[ ] --> C 
+    C --> SORTIE[ ]
+    M --> SORTIE2[ ]
+    D --> SORTIE3[ ]
+    V--> SORTIE4[ ]
 
 
 
@@ -30,11 +30,11 @@ graph LR
 
 
 
-    style START height:0px;
-    style STOP  height:0px; 
-    style STOP2 height:0px;
-    style STOP3 height:0px;
-    style STOP4 height:0px;
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2 height:0px;
+    style SORTIE3 height:0px;
+    style SORTIE4 height:0px;
 ```
 
 ### 2
@@ -50,8 +50,8 @@ graph LR
     5((5))
     6((6))
 
-    START[ ] --> 0
-    6 --> STOP[ ]
+    ENTREE[ ] --> 0
+    6 --> SORTIE[ ]
 
 
 
@@ -64,8 +64,8 @@ graph LR
 
 
 
-    style START height:0px;
-    style STOP  height:0px; 
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
 ```
 </br>
 </br>
@@ -78,8 +78,8 @@ graph LR
     2((2))
     3((3))
 
-    START[ ] --> 0
-    3 --> STOP[ ]
+    ENTREE[ ] --> 0
+    3 --> SORTIE[ ]
 
 
 
@@ -90,8 +90,8 @@ graph LR
 
 
 
-    style START height:0px;
-    style STOP  height:0px; 
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
 ```
 </br>
 </br>
@@ -105,8 +105,8 @@ graph LR
     0((0)) 
     1((1))
 
-    START[ ] --> 0
-    1 --> STOP[ ]
+    ENTREE[ ] --> 0
+    1 --> SORTIE[ ]
     
     0 --0--> 1
     1 --1--> 0
@@ -116,8 +116,8 @@ graph LR
 
 
 
-    style START height:0px;
-    style STOP  height:0px; 
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
 ```
 </br>
 </br>
@@ -129,8 +129,8 @@ graph LR
     1((1))
     2((2))
 
-    START[ ] --> 0 
-    2 --> STOP[ ]
+    ENTREE[ ] --> 0 
+    2 --> SORTIE[ ]
 
 
 
@@ -141,6 +141,31 @@ graph LR
 
 
 
-    style START height:0px;
-    style STOP  height:0px; 
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+```
+</br>
+</br>
+
+(c)
+```mermaid
+graph LR
+    0((0)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> 0 
+    2 --> SORTIE[ ]
+
+
+
+    0 --1--> 1 
+    1 --1--> 2
+    2 --0--> 1    
+    1 --0--> 1
+
+
+
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
 ```
