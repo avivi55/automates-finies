@@ -7,7 +7,7 @@ my school exercises for my finite automata class
 
 ### 1
 
-::: mermaid
+```mermaid
 graph LR
     START[ ] --> C((C)) --> STOP[ ]
     C --m--> M((M)) --> STOP2[ ]
@@ -19,4 +19,4 @@ graph LR
     style START height:0px;
     style STOP  height:0px;
     
-:::
+```
