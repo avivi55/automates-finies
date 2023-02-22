@@ -335,3 +335,59 @@ Soit $B$ = $n$*b, $n \in \N$
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
 
 Les états $\textcircled{1}$ et $\textcircled{3}$ sont inutile car inatteignable ou ne menant à rien.
+</br>
+</br>
+</br>
+
+
+### 6
+
+Toutes les sous-questions
+$a)$ ont comme réponse : `non standard`
+
+Nous étudieront donc que les sous-questions $b)$ et $c)$
+
+Nous nous permettrons de compléter les automates au besoin.
+
+$6.1)$
+
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> 1
+    2 --> SORTIE[ ]
+
+
+
+    1 --a--> 2
+    2 --b--> 1
+```
+
+$b)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --> I
+    2 --> SORTIE[ ]
+
+
+
+    I --a--> 1 
+
+    1 --a--> 2
+    2 --b--> 1 
+```
+
+
+
