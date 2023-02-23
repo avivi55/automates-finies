@@ -4,20 +4,9 @@ my school exercises for my finite automata class
 
 ---
 
-$
-\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
-$
-$
-\specialFrac{7}{z+3}
-$
+$\def\specialFrac#1#2{\frac{x + #1}{y + #2}}$
 
-$
-a
-$
-
-$a$
-
-
+$\specialFrac{7}{z+3}$
 
 ## TD1
 
