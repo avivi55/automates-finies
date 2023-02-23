@@ -1,18 +1,36 @@
 # Exerices Automates Finis
 ---
 
+## Sommaire
+
+* [TD1](#-td1)
+
+---
+
 $
-\gdef\deriv#1#2{\frac{\partial^{#1} {#2}}{\partial {#2}^{#1}}}
+%  MACROS
+\gdef\EX#1{\huge{\text{Exercice #1}}}
 $
 
-$\deriv{y}{x}$
-
-++ds++
-test
 
 ## TD1
 
-### 1
+
+```gnuplot {cmd=true output="html"}
+set terminal svg
+set title "Simple Plots" font ",20"
+set key left box
+set samples 50
+set style data points
+
+plot [-10:10] sin(x),cos(x)
+```
+
+
+<br>
+<br>
+
+$$\EX{1}$$
 
 ```mermaid
 graph LR
@@ -41,8 +59,14 @@ graph LR
     D --m--> M
     V --m--> M
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### 2
+$$\EX{2}$$
 
 $a)$
 
@@ -72,11 +96,7 @@ graph LR
     5 --U--> 6
 ```
 
-</br>
-</br>
-
 $b)$ Standardisation
-
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -98,11 +118,14 @@ graph LR
     3 --C--> 1
 ```
 
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### 3
+$$\EX{3}$$
 
 $a)$
 
@@ -123,9 +146,6 @@ graph LR
     0 --1--> 0
     1 --0--> 1
 ```
-
-</br>
-</br>
 
 $b)$ Standardisation
 
@@ -149,12 +169,9 @@ graph LR
     1 --0--> 1
 ```
 
-</br>
-</br>
-
-Soit P = point( . )
 
 $c)$
+$Soit$ P = $\cdot$
 
 ```mermaid
 graph LR
@@ -188,10 +205,7 @@ graph LR
 
     4 -- 0..9 --> 4
 ```
-
-</br>
-</br>
-
+* [TD1](#td1)
 $d)$
 
 ```mermaid
@@ -228,9 +242,6 @@ graph LR
     4 --1--> 5
 ```
 
-</br>
-</br>
-
 $e)$
 
 ```mermaid
@@ -257,11 +268,14 @@ graph LR
     3 --b--> 2
 ```
 
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### 4
+$$\EX{4}$$
 
 **Méthode de cours :**
 
@@ -321,11 +335,15 @@ graph LR
     6 --0--> 5
 ```
 
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### 5
+$$\EX{5}$$
+
 
 $a)$
 
@@ -342,17 +360,19 @@ bbba,
 Soit $B$ = $n$ $\cdot$ b, $n \in \mathbb{N^+}$
 
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
+Les états $\textcircled{1}$ et $\textcircled{3}$ sont inutile car inatteignable ou ne menant à rien.
 
-Les états **1** et **3** sont inutile car inatteignable ou ne menant à rien.
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### 6
+$$\EX{6}$$
 
 Toutes les sous-questions
 $a)$ ont comme réponse : `non standard`
-
 Nous étudieront donc que les sous-questions $b)$ Standardisation et $c)$
 
 $6.1)$
@@ -648,8 +668,8 @@ graph LR
     2 --b--> 3
 ```
 
-$c) \\ $
-$\\ cf.6.4) b)$
+$c)$
+$cf.~~6.4)~b)$
 
 <br>
 <br>
@@ -784,6 +804,14 @@ graph LR
     1 --b--> 4
 ```
 
-$c) \\ $
-$\\ cf.6.6) b)$
+$c)$
+$cf.~~6.6)~b)$
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+$$$$
