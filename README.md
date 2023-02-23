@@ -627,7 +627,7 @@ graph LR
 ```
 
 $c)$
-[$\\ cf.6.4) b) $](./README.md#L536-L564)
+$\\ cf.6.4) b)$ [ici](./README.md#L536-L564)
 
 <br>
 <br>
