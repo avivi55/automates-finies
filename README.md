@@ -66,7 +66,7 @@ graph LR
 </br>
 </br>
 
-$b)$
+$b)$ Standardisation
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -114,7 +114,7 @@ graph LR
 </br>
 </br>
 
-$b)$
+$b)$ Standardisation
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -346,9 +346,7 @@ Les états **1** et **3** sont inutile car inatteignable ou ne menant à rien.
 Toutes les sous-questions
 $a)$ ont comme réponse : `non standard`
 
-Nous étudieront donc que les sous-questions $b)$ et $c)$
-
-Nous nous permettrons de compléter les automates au besoin.
+Nous étudieront donc que les sous-questions $b)$ Standardisation et $c)$
 
 $6.1)$
 ```mermaid
@@ -366,7 +364,7 @@ graph LR
     1 --a--> 1
 ```
 
-$b)$
+$b)$ Standardisation
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -421,7 +419,7 @@ graph LR
     2 --b--> 1
 ```
 
-$b)$
+$b)$ Standardisation
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -465,7 +463,7 @@ graph LR
     2 --b--> 1
 ```
 
-$b)$
+$b)$ Standardisation
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -505,5 +503,289 @@ graph LR
 
     1 --a--> 2
     2 --b--> 1 
+```
+
+<br>
+<br>
+
+$6.4)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --> 1 
+    2 --> SORTIE[ ]
+    3 --> SORTIE2[ ]
+
+
+
+    1 --a--> 1
+    1 --a--> 3
+    1 --b--> 2
+    
+    2 --a--> 1
+    2 --b--> 3
+```
+
+$b)$ Standardisation
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --> I
+    2 --> SORTIE2[ ]
+    3 --> SORTIE3[ ]
+
+
+
+    I --a--> 1
+    I --a--> 3
+    I --b--> 2
+
+    1 --a--> 1
+    1 --a--> 3
+    1 --b--> 2
+    
+    2 --a--> 1
+    2 --b--> 3
+```
+
+$c)$ Il ne reconnaît pas le mot vide.
+
+<br>
+<br>
+
+$6.5)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --> 1 
+    ENTREE2[ ] --> 3
+    2 --> SORTIE[ ]
+    3 --> SORTIE2[ ]
+
+
+
+    1 --a--> 1
+    1 --a--> 3
+    1 --b--> 2
+    
+    2 --a--> 1
+    2 --b--> 3
+```
+
+$b)$ Standardisation
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --> I --> SORTIE[ ]
+    2 --> SORTIE2[ ]
+    3 --> SORTIE3[ ]
+
+
+
+    I --a--> 1
+    I --a--> 3
+    I --b--> 2
+
+    1 --a--> 1
+    1 --a--> 3
+    1 --b--> 2
+    
+    2 --a--> 1
+    2 --b--> 3
+```
+
+$c)$
+[$\\ cf.6.4) b) $](./README.md#L536-L548)
+
+<br>
+<br>
+
+$6.6)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --> 1 
+    ENTREE2[ ] --> 3 
+    2 --> SORTIE[ ]
+    4 --> SORTIE2[ ]
+
+
+    4 --b--> 3
+
+    3 --a--> 2
+    3 --a--> 4
+
+    1 --a--> 2
+    1 --b--> 4
+```
+
+$b)$ Standardisation
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --> I
+    4 --> SORTIE[ ]
+    2 --> SORTIE2[ ]
+
+
+
+    I --a--> 2
+    I --a/b--> 4
+
+    4 --b--> 3
+
+    3 --a--> 2
+    3 --a--> 4
+
+    1 --a--> 2
+    1 --b--> 4
+```
+
+$c)$ Il ne reconnaît pas le mot vide.
+
+<br>
+<br>
+
+$6.7)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --> 1 
+    ENTREE2[ ] --> 3 
+    2 --> SORTIE[ ]
+    4 --> SORTIE2[ ]
+    3 --> SORTIE3[ ]
+
+
+    4 --b--> 3
+
+    3 --a--> 2
+    3 --a--> 4
+
+    1 --a--> 2
+    1 --b--> 4
+```
+
+$b)$ Standardisation
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --> I --> SORTIE3[ ]
+    4 --> SORTIE[ ]
+    2 --> SORTIE2[ ]
+
+
+
+    I --a--> 2
+    I --a/b--> 4
+
+    4 --b--> 3
+
+    3 --a--> 2
+    3 --a--> 4
+
+    1 --a--> 2
+    1 --b--> 4
+```
+
+$c)$
+```mermaid
+graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --> I
+    4 --> SORTIE[ ]
+    2 --> SORTIE2[ ]
+
+
+
+    I --a--> 2
+    I --a/b--> 4
+
+    4 --b--> 3
+
+    3 --a--> 2
+    3 --a--> 4
+
+    1 --a--> 2
+    1 --b--> 4
 ```
 
