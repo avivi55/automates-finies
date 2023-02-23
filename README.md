@@ -1,10 +1,18 @@
 # finite-automata-exercises
+
 my school exercises for my finite automata class
 
 ---
 
+$
+\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
+$
+$
+\specialFrac{7}{z+3}
+$
 
-$\textbigcircle{a}$
+
+
 ## TD1
 
 ### 1
@@ -40,6 +48,7 @@ graph LR
 ### 2
 
 $a)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -65,10 +74,12 @@ graph LR
     4 --O--> 5
     5 --U--> 6
 ```
+
 </br>
 </br>
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -87,8 +98,9 @@ graph LR
     0 --C--> 1
     1 --O--> 2
     2 --U--> 3
-    3 --C--> 1 
+    3 --C--> 1
 ```
+
 </br>
 </br>
 </br>
@@ -96,6 +108,7 @@ graph LR
 ### 3
 
 $a)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -113,10 +126,12 @@ graph LR
     0 --1--> 0
     1 --0--> 1
 ```
+
 </br>
 </br>
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -136,13 +151,14 @@ graph LR
     2 --0--> 1    
     1 --0--> 1
 ```
-</br>
-</br>
 
+</br>
+</br>
 
 Soit P = point( . )
 
 $c)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -175,11 +191,12 @@ graph LR
 
     4 -- 0..9 --> 4
 ```
-</br>
-</br>
 
+</br>
+</br>
 
 $d)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -213,11 +230,12 @@ graph LR
     4 --0--> 4
     4 --1--> 5
 ```
-</br>
-</br>
 
+</br>
+</br>
 
 $e)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -239,12 +257,12 @@ graph LR
     1 --a--> 0
     1 --b--> 2    
     2 --b--> 3
-    3 --b--> 2  
+    3 --b--> 2
 ```
-</br>
-</br>
-</br>
 
+</br>
+</br>
+</br>
 
 ### 4
 
@@ -265,15 +283,7 @@ graph LR
 <br>
 
 Tableau de transition :
-| État |  0  |  1  |
-|:----:|:---:|:---:|
-|   0  |  0  |  1  |
-|   1  |  2  |  3  |
-|   2  |  4  |  5  |
-|   3  |  6  |  0  |
-|   4  |  1  |  2  |
-|   5  |  3  |  4  |
-|   6  |  5  |  6  |
+
 
 ```mermaid
 graph LR
@@ -313,10 +323,10 @@ graph LR
     6 --1--> 6
     6 --0--> 5
 ```
-</br>
-</br>
-</br>
 
+</br>
+</br>
+</br>
 
 ### 5
 
@@ -324,24 +334,22 @@ $a)$
 
 Les mots reconnus par l'automate (chemin inverse):
 {
-    a,
-    ab,
-    bab,
-    abbb,
-    bbba,
-    ...
+a,
+ab,
+bab,
+abbb,
+bbba,
+...
 }
 
 Soit $B$ = $n$ $\cdot$ b, $n \in \mathbb{N^+}$
 
 Donc l'automate reconnait les mots de la formes :  $B$ a $B$
 
-
 Les états **1** et **3** sont inutile car inatteignable ou ne menant à rien.
 </br>
 </br>
 </br>
-
 
 ### 6
 
@@ -351,6 +359,7 @@ $a)$ ont comme réponse : `non standard`
 Nous étudieront donc que les sous-questions $b)$ Standardisation et $c)$
 
 $6.1)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -367,6 +376,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -383,7 +393,9 @@ graph LR
     I --a--> 1
     1 --a--> 1
 ```
+
 $c)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -404,6 +416,7 @@ graph LR
 <br>
 
 $6.2)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -422,6 +435,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -439,14 +453,16 @@ graph LR
     I --a--> 1 
 
     1 --a--> 2
-    2 --b--> 1 
+    2 --b--> 1
 ```
+
 $c)$ Il ne reconnaît pas le mot vide.
 
 <br>
 <br>
 
 $6.3)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -466,6 +482,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -484,9 +501,11 @@ graph LR
     I --a--> 2 
 
     1 --a--> 2
-    2 --b--> 1 
+    2 --b--> 1
 ```
+
 $c)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -504,13 +523,14 @@ graph LR
     I --a--> 2 
 
     1 --a--> 2
-    2 --b--> 1 
+    2 --b--> 1
 ```
 
 <br>
 <br>
 
 $6.4)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -536,6 +556,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -571,6 +592,7 @@ $c)$ Il ne reconnaît pas le mot vide.
 <br>
 
 $6.5)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -598,6 +620,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -635,6 +658,7 @@ $\\ cf.6.4) b)$
 <br>
 
 $6.6)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -663,6 +687,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -699,6 +724,7 @@ $c)$ Il ne reconnaît pas le mot vide.
 <br>
 
 $6.7)$
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -729,6 +755,7 @@ graph LR
 ```
 
 $b)$ Standardisation
+
 ```mermaid
 graph LR
     style ENTREE height:0px;
@@ -762,3 +789,4 @@ graph LR
 
 $c) \\ $
 $\\ cf.6.6) b)$
+
