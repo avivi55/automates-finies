@@ -4,7 +4,7 @@ my school exercises for my finite automata class
 
 ---
 
-$\newcommand{\deriv}[3][]{{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}$
+\(\newcommand{\deriv}[3][]{{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}\)
 
 $\deriv{y}{x}$
 
