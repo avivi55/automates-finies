@@ -626,8 +626,8 @@ graph LR
     2 --b--> 3
 ```
 
-$c)$
-$\\ cf.6.4) b)$ [ici](./README.md#L536-L564)
+$c)\\$
+$\\ cf.6.4) b)$
 
 <br>
 <br>
@@ -758,34 +758,5 @@ graph LR
     1 --b--> 4
 ```
 
-$c)$
-```mermaid
-graph LR
-    style ENTREE height:0px;
-    style SORTIE  height:0px; 
-    style SORTIE2  height:0px; 
-
-    I((I)) 
-    1((1))
-    2((2))
-    3((3))
-    4((4))
-
-    ENTREE[ ] --> I
-    4 --> SORTIE[ ]
-    2 --> SORTIE2[ ]
-
-
-
-    I --a--> 2
-    I --a/b--> 4
-
-    4 --b--> 3
-
-    3 --a--> 2
-    3 --a--> 4
-
-    1 --a--> 2
-    1 --b--> 4
-```
-
+$c)\\$
+$\\ cf.6.6) b)$
