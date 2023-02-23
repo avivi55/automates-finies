@@ -2,7 +2,7 @@
 ---
 
 $
-\newcommand{\deriv}[3][]{{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+\gdef\deriv#1#2{\frac{\partial^{#1} {#2}}{\partial {#2}^{#1}}}
 $
 
 $\deriv{y}{x}$
