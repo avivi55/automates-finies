@@ -3,6 +3,8 @@ my school exercises for my finite automata class
 
 ---
 
+
+$\textbigcircle{a}$
 ## TD1
 
 ### 1
