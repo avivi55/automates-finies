@@ -1,0 +1,955 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"processEnvironments":false,"processEscapes":true,"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}});
+        </script>
+        <script type="text/javascript" async src="file:////home/jacques/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.6.7/node_modules/@shd101wyy/mume/dependencies/mathjax/MathJax.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      <script type="text/javascript" src="file:////home/jacques/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.6.7/node_modules/@shd101wyy/mume/dependencies/mermaid/mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      
+      
+      <style>
+      /* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+asciidoc+aspnet+autoit+autohotkey+bash+basic+batch+c+brainfuck+bro+bison+csharp+cpp+coffeescript+ruby+css-extras+d+dart+django+diff+docker+eiffel+elixir+erlang+fsharp+fortran+gherkin+git+glsl+go+graphql+groovy+haml+handlebars+haskell+haxe+http+icon+inform7+ini+j+jade+java+jolie+json+julia+keyman+kotlin+latex+less+livescript+lolcode+lua+makefile+markdown+matlab+mel+mizar+monkey+nasm+nginx+nim+nix+nsis+objectivec+ocaml+oz+parigp+parser+pascal+perl+php+php-extras+powershell+processing+prolog+properties+protobuf+puppet+pure+python+q+qore+r+jsx+reason+rest+rip+roboconf+crystal+rust+sas+sass+scss+scala+scheme+smalltalk+smarty+sql+stylus+swift+tcl+textile+twig+typescript+vbnet+verilog+vhdl+vim+wiki+xojo+yaml */
+/**
+ * prism.js Dark theme for JavaScript, CSS and HTML
+ * Based on the slides of the talk “/Reg(exp){2}lained/”
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: white;
+	background: none;
+	text-shadow: 0 -.1em .2em black;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+	background: hsl(30, 20%, 25%);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border: .3em solid hsl(30, 20%, 40%);
+	border-radius: .5em;
+	box-shadow: 1px 1px .5em black inset;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .15em .2em .05em;
+	border-radius: .3em;
+	border: .13em solid hsl(30, 20%, 40%);
+	box-shadow: 1px 1px .3em -.1em black inset;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+	opacity: .7;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+	color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.deleted {
+	color: red;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#c5c8c6;background-color:#1d1f21;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#9ba09d}html body strong{color:#fff}html body del{color:#9ba09d}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#ddd;text-decoration:none}html body a:hover{color:#cecece;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#9ba09d;background-color:#303337;border-left:4px solid #43484c}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#43484c;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#fff}html body table td,html body table th{border:1px solid #43484c;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#fff;background-color:#303337;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#43484c;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #43484c;border-bottom:2px solid #35393c;padding:2px 4px;background-color:#303337;border-radius:3px}@media print{html body{background-color:#1d1f21}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#9ba09d}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}html body a{text-decoration:underline}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="-finite-automata-exercises">finite-automata-exercises</h1>
+
+<p>my school exercises for my finite automata class</p>
+<hr>
+<p></p><div class="mathjax-exps">\[\newcommand{\deriv}[3][]{{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}\]</div><p></p>
+<p><span class="mathjax-exps">$\deriv{y}{x}$</span></p>
+<p>++ds++<br>
+test</p>
+<h2 class="mume-header" id="-td1">TD1</h2>
+
+<h3 class="mume-header" id="-1">1</h3>
+
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2 height:0px;
+    style SORTIE3 height:0px;
+    style SORTIE4 height:0px;
+    
+    C((C))
+    M((M))
+    D((D))  
+    V((V)) 
+
+    ENTREE[ ] --&gt; C 
+    C --&gt; SORTIE[ ]
+    M --&gt; SORTIE2[ ]
+    D --&gt; SORTIE3[ ]
+    V--&gt; SORTIE4[ ]
+
+
+
+    C --m--&gt; M
+    M --d--&gt; D
+    M --v--&gt; V
+    D --m--&gt; M
+    V --m--&gt; M
+</div><h3 class="mume-header" id="-2">2</h3>
+
+<p><span class="mathjax-exps">$a)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+    5((5))
+    6((6))
+
+    ENTREE[ ] --&gt; 0
+    6 --&gt; SORTIE[ ]
+
+
+
+    0 --C--&gt; 1
+    1 --O--&gt; 2
+    2 --U--&gt; 3
+    3 --C--&gt; 4
+    4 --O--&gt; 5
+    5 --U--&gt; 6
+</div><br>
+<br>
+<p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px;
+
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; 0
+    3 --&gt; SORTIE[ ]
+
+
+
+    0 --C--&gt; 1
+    1 --O--&gt; 2
+    2 --U--&gt; 3
+    3 --C--&gt; 1
+</div><br>
+<br>
+<br>
+<h3 class="mume-header" id="-3">3</h3>
+
+<p><span class="mathjax-exps">$a)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    
+    0((0)) 
+    1((1))
+
+    ENTREE[ ] --&gt; 0
+    1 --&gt; SORTIE[ ]
+    
+    0 --0--&gt; 1
+    1 --1--&gt; 0
+    
+    0 --1--&gt; 0
+    1 --0--&gt; 1
+</div><br>
+<br>
+<p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    
+    0((0)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; 0 
+    2 --&gt; SORTIE[ ]
+
+
+
+    0 --1--&gt; 1 
+    1 --1--&gt; 2
+    2 --0--&gt; 1    
+    1 --0--&gt; 1
+</div><br>
+<br>
+<p>Soit P = point( . )</p>
+<p><span class="mathjax-exps">$c)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; 0 
+    ENTREE2[ ] --&gt; 1
+    3 --&gt; SORTIE[ ]
+    4 --&gt; SORTIE2[ ]
+
+
+
+    0 -- +/- --&gt; 1 
+
+    1 -- 0..9  --&gt; 2
+    1 -- P --&gt; 3    
+    
+    2 -- P --&gt; 4
+
+    3 -- 0..9 --&gt; 3
+    3 -- 0..9 --&gt; 4
+
+    4 -- 0..9 --&gt; 4
+</div><br>
+<br>
+<p><span class="mathjax-exps">$d)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+    5((5))
+
+    
+    ENTREE[ ] --&gt; 0 
+    5 --&gt; SORTIE[ ]
+
+
+
+    0 --0--&gt; 1 
+    0 --1--&gt; 2 
+
+    1 --0--&gt; 1
+    1 --1--&gt; 3    
+
+    3 --0--&gt; 5
+    3 --1--&gt; 3
+    
+    2 --1--&gt; 2
+    2 --0--&gt; 4
+
+    4 --0--&gt; 4
+    4 --1--&gt; 5
+</div><br>
+<br>
+<p><span class="mathjax-exps">$e)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px;  
+
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; 0
+    3 --&gt; SORTIE2[ ]
+    1 --&gt; SORTIE[ ]
+
+
+    0 --a--&gt; 1 
+    0 --b--&gt; 3 
+    1 --a--&gt; 0
+    1 --b--&gt; 2    
+    2 --b--&gt; 3
+    3 --b--&gt; 2
+</div><br>
+<br>
+<br>
+<h3 class="mume-header" id="-4">4</h3>
+
+<p><strong>M&#xE9;thode de cours :</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">7n % 7</th>
+<th style="text-align:center">14n % 7</th>
+<th style="text-align:center">14n+1 % 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Tableau de transition :</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    0((0)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+    5((5))
+    6((6))
+
+    ENTREE[ ] --&gt; 0
+    6 --&gt; SORTIE[ ]
+
+
+    0 --0--&gt; 0
+    0 --1--&gt; 1
+
+    1 --0--&gt; 2
+    1 --1--&gt; 3
+    
+    2 --0--&gt; 4
+    2 --1--&gt; 5
+    
+    3 --0--&gt; 6
+    3 --1--&gt; 0 
+
+    4 --0--&gt; 1
+    4 --1--&gt; 2
+    
+    5 --0--&gt; 3
+    5 --1--&gt; 4
+    
+    6 --1--&gt; 6
+    6 --0--&gt; 5
+</div><br>
+<br>
+<br>
+<h3 class="mume-header" id="-5">5</h3>
+
+<p><span class="mathjax-exps">$a)$</span></p>
+<p>Les mots reconnus par l&apos;automate (chemin inverse):<br>
+{<br>
+a,<br>
+ab,<br>
+bab,<br>
+abbb,<br>
+bbba,<br>
+...<br>
+}</p>
+<p>Soit <span class="mathjax-exps">$B$</span> = <span class="mathjax-exps">$n$</span> <span class="mathjax-exps">$\cdot$</span> b, <span class="mathjax-exps">$n \in \mathbb{N^+}$</span></p>
+<p>Donc l&apos;automate reconnait les mots de la formes :  <span class="mathjax-exps">$B$</span> a <span class="mathjax-exps">$B$</span></p>
+<p>Les &#xE9;tats <strong>1</strong> et <strong>3</strong> sont inutile car inatteignable ou ne menant &#xE0; rien.<br>
+<br><br>
+<br><br>
+<br></p>
+<h3 class="mume-header" id="-6">6</h3>
+
+<p>Toutes les sous-questions<br>
+<span class="mathjax-exps">$a)$</span> ont comme r&#xE9;ponse : <code>non standard</code></p>
+<p>Nous &#xE9;tudieront donc que les sous-questions <span class="mathjax-exps">$b)$</span> Standardisation et <span class="mathjax-exps">$c)$</span></p>
+<p><span class="mathjax-exps">$6.1)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    1((1))
+
+    ENTREE[ ] --&gt; 1
+    1 --&gt; SORTIE[ ]
+
+
+
+    1 --a--&gt; 1
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+
+    ENTREE[ ] --&gt; I --&gt; SORTIE2[ ]
+    1 --&gt; SORTIE[ ]
+
+
+    I --a--&gt; 1
+    1 --a--&gt; 1
+</div><p><span class="mathjax-exps">$c)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+
+    ENTREE[ ] --&gt; I
+    1 --&gt; SORTIE[ ]
+
+
+    I --a--&gt; 1
+    1 --a--&gt; 1
+</div><br>
+<br>
+<p><span class="mathjax-exps">$6.2)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; 1
+    2 --&gt; SORTIE[ ]
+
+
+
+    1 --a--&gt; 2
+    2 --b--&gt; 1
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; I
+    2 --&gt; SORTIE[ ]
+
+
+
+    I --a--&gt; 1 
+
+    1 --a--&gt; 2
+    2 --b--&gt; 1
+</div><p><span class="mathjax-exps">$c)$</span> Il ne reconna&#xEE;t pas le mot vide.</p>
+<br>
+<br>
+<p><span class="mathjax-exps">$6.3)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; 1 --&gt; SORTIE2[ ]
+    2 --&gt; SORTIE[ ]
+
+
+
+    1 --a--&gt; 2
+    2 --b--&gt; 1
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; I --&gt; SORTIE2[ ]
+    2 --&gt; SORTIE[ ]
+
+
+
+    I --a--&gt; 2 
+
+    1 --a--&gt; 2
+    2 --b--&gt; 1
+</div><p><span class="mathjax-exps">$c)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+
+    ENTREE[ ] --&gt; I
+    2 --&gt; SORTIE[ ]
+
+
+
+    I --a--&gt; 2 
+
+    1 --a--&gt; 2
+    2 --b--&gt; 1
+</div><br>
+<br>
+<p><span class="mathjax-exps">$6.4)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; 1 
+    2 --&gt; SORTIE[ ]
+    3 --&gt; SORTIE2[ ]
+
+
+
+    1 --a--&gt; 1
+    1 --a--&gt; 3
+    1 --b--&gt; 2
+    
+    2 --a--&gt; 1
+    2 --b--&gt; 3
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; I
+    2 --&gt; SORTIE2[ ]
+    3 --&gt; SORTIE3[ ]
+
+
+
+    I --a--&gt; 1
+    I --a--&gt; 3
+    I --b--&gt; 2
+
+    1 --a--&gt; 1
+    1 --a--&gt; 3
+    1 --b--&gt; 2
+    
+    2 --a--&gt; 1
+    2 --b--&gt; 3
+</div><p><span class="mathjax-exps">$c)$</span> Il ne reconna&#xEE;t pas le mot vide.</p>
+<br>
+<br>
+<p><span class="mathjax-exps">$6.5)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; 1 
+    ENTREE2[ ] --&gt; 3
+    2 --&gt; SORTIE[ ]
+    3 --&gt; SORTIE2[ ]
+
+
+
+    1 --a--&gt; 1
+    1 --a--&gt; 3
+    1 --b--&gt; 2
+    
+    2 --a--&gt; 1
+    2 --b--&gt; 3
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; I --&gt; SORTIE[ ]
+    2 --&gt; SORTIE2[ ]
+    3 --&gt; SORTIE3[ ]
+
+
+
+    I --a--&gt; 1
+    I --a--&gt; 3
+    I --b--&gt; 2
+
+    1 --a--&gt; 1
+    1 --a--&gt; 3
+    1 --b--&gt; 2
+    
+    2 --a--&gt; 1
+    2 --b--&gt; 3
+</div><p><span class="mathjax-exps">$c) \\$</span><br>
+<span class="mathjax-exps">$\\ cf.6.4) b)$</span></p>
+<br>
+<br>
+<p><span class="mathjax-exps">$6.6)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; 1 
+    ENTREE2[ ] --&gt; 3 
+    2 --&gt; SORTIE[ ]
+    4 --&gt; SORTIE2[ ]
+
+
+    4 --b--&gt; 3
+
+    3 --a--&gt; 2
+    3 --a--&gt; 4
+
+    1 --a--&gt; 2
+    1 --b--&gt; 4
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; I
+    4 --&gt; SORTIE[ ]
+    2 --&gt; SORTIE2[ ]
+
+
+
+    I --a--&gt; 2
+    I --a/b--&gt; 4
+
+    4 --b--&gt; 3
+
+    3 --a--&gt; 2
+    3 --a--&gt; 4
+
+    1 --a--&gt; 2
+    1 --b--&gt; 4
+</div><p><span class="mathjax-exps">$c)$</span> Il ne reconna&#xEE;t pas le mot vide.</p>
+<br>
+<br>
+<p><span class="mathjax-exps">$6.7)$</span></p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style ENTREE2 height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; 1 
+    ENTREE2[ ] --&gt; 3 
+    2 --&gt; SORTIE[ ]
+    4 --&gt; SORTIE2[ ]
+    3 --&gt; SORTIE3[ ]
+
+
+    4 --b--&gt; 3
+
+    3 --a--&gt; 2
+    3 --a--&gt; 4
+
+    1 --a--&gt; 2
+    1 --b--&gt; 4
+</div><p><span class="mathjax-exps">$b)$</span> Standardisation</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+    style SORTIE  height:0px; 
+    style SORTIE2  height:0px; 
+    style SORTIE3  height:0px; 
+
+    I((I)) 
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; I --&gt; SORTIE3[ ]
+    4 --&gt; SORTIE[ ]
+    2 --&gt; SORTIE2[ ]
+
+
+
+    I --a--&gt; 2
+    I --a/b--&gt; 4
+
+    4 --b--&gt; 3
+
+    3 --a--&gt; 2
+    3 --a--&gt; 4
+
+    1 --a--&gt; 2
+    1 --b--&gt; 4
+</div><p><span class="mathjax-exps">$c) \\$</span><br>
+<span class="mathjax-exps">$\\ cf.6.6) b)$</span></p>
+
+      </div>
+      
+      
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "default"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+  
+    </body></html>
