@@ -315,7 +315,19 @@
 </ul>
 <hr>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation encoding="application/x-tex">%  MACROS
-\gdef\EX#1{\huge{\text{Exercice #1}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+\gdef\EX#1{\huge{\text{Exercice #1}}}
+%
+\gdef\green#1{\textcolor{green}{#1}}
+\gdef\red#1{\textcolor{red}{#1}}
+\gdef\blue#1{\textcolor{blue}{#1}}
+\gdef\yellow#1{\textcolor{yellow}{#1}}
+\gdef\magenta#1{\textcolor{magenta}{#1}}
+%
+\gdef\greent#1{\textcolor{green}{\text{#1}}}
+\gdef\redt#1{\textcolor{red}{\text{#1}}}
+\gdef\bluet#1{\textcolor{0784b5}{\text{#1}}}
+\gdef\yellowt#1{\textcolor{yellow}{\text{#1}}}
+\gdef\magentat#1{\textcolor{magenta}{\text{#1}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
 <h2 class="mume-header" id="-td1">TD1</h2>
 
 <br>
@@ -1640,33 +1652,218 @@ Nous &#xE9;tudieront donc que les sous-questions <span class="katex"><span class
 <br>
 <br>
 <br>
-<h6 class="mume-header" id="-ex8"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Exercice&#xA0;8</mtext></mstyle></mrow><annotation encoding="application/x-tex">\EX{8}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Exercice&#xA0;8</span></span></span></span></span></span></span></h6>
+<h6 class="mume-header" id="-ex9"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Exercice&#xA0;9</mtext></mstyle></mrow><annotation encoding="application/x-tex">\EX{9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Exercice&#xA0;9</span></span></span></span></span></span></span></h6>
 
+<p><strong>Langage compl&#xE9;mentaire</strong></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></p>
 <div class="admonition quote">
 <div class="mermaid">graph LR
     style ENTREE height:0px;
-    style ENTREE2 height:0px;
+
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+    5((5))
+    P((P))
+
+    ENTREE[ ] --&gt; 1
+    5(((5)))
+
+
+
+    1 --1--&gt; 1
+    1 --0--&gt; 2
+
+    2 --1--&gt; 2
+    2 --0--&gt; 3
+
+    3 --1--&gt; 3
+    3 --0--&gt; 4
+    
+    4 --1--&gt; 4
+    4 --0--&gt; 5
+    5 --1--&gt; 5
+
+    5 --0--&gt; P
+
+    P --0,1--&gt; P
+</div></div>
+<p>donne</p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    1(((1)))
+    2(((2)))
+    3(((3)))
+    4(((4)))
+    P(((P)))
+
+    ENTREE[ ] --&gt; 1
+    5((5))
+
+
+
+    1 --1--&gt; 1
+    1 --0--&gt; 2
+
+    2 --1--&gt; 2
+    2 --0--&gt; 3
+
+    3 --1--&gt; 3
+    3 --0--&gt; 4
+    
+    4 --1--&gt; 4
+    4 --0--&gt; 5
+    5 --1--&gt; 5
+
+    5 --0--&gt; P
+
+    P --0,1--&gt; P
+</div></div>
+<br>
+<br>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span></span></p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
 
     0((0))
-    2((2))
     1((1))
 
-    0(((0)))
-    ENTREE[ ] --&gt; 0 
-    ENTREE2[ ] --&gt; 1
-    2(((2)))
+    ENTREE[ ] --&gt; 0
+    1(((1)))
 
 
 
-    0 --b--&gt; 2
-    0 --b--&gt; 1 
-    
-    1 --a,b--&gt; 2 
-    1 --a--&gt; 0 
-    
-    2 --a--&gt; 0    
+    0 --0,1--&gt; 0
+    0 --1--&gt; 1
+
+    1 --0,1--&gt; 1
 </div></div>
-<p>Nous construisons le tableau de d&#xE9;terminisation :</p>
+<p>le deterministe:</p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((01))
+
+    ENTREE[ ] --&gt; 0
+    1(((01)))
+
+
+
+    0 --0--&gt; 0
+    0 --1--&gt; 1
+
+    1 --0,1--&gt; 1
+</div></div>
+<p>et le compl&#xE9;mentaire :</p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((01))
+
+    ENTREE[ ] --&gt; 0
+    0(((0)))
+
+
+
+    0 --0--&gt; 0
+    0 --1--&gt; 1
+
+    1 --0,1--&gt; 1
+</div></div>
+<br>
+<br>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mo stretchy="false">{</mo><mi>&#x3F5;</mi><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>01</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">L = \{\epsilon, 0, 1, 01\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">&#x3F5;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">01</span><span class="mclose">}</span></span></span></span></p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((1))
+    2((2))
+    3((3))
+    P((P))
+
+    ENTREE[ ] --&gt; 0
+    0(((0)))
+    1(((1)))
+    2(((2)))
+    3(((3)))
+
+
+    0 --0--&gt; 1
+    0 --1--&gt; 3
+    1 --1--&gt; 2
+
+    3 --0,1--&gt; P
+    2 --0,1--&gt; P
+    1 --0--&gt; P
+    P --0,1--&gt; P
+</div></div>
+<p>et le compl&#xE9;mentaire :</p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((1))
+    2((2))
+    3((3))
+    P(((P)))
+
+    ENTREE[ ] --&gt; 0
+    0((0))
+    1((1))
+    2((2))
+    3((3))
+
+
+    0 --0--&gt; 1
+    0 --1--&gt; 3
+    1 --1--&gt; 2
+
+    3 --0,1--&gt; P
+    2 --0,1--&gt; P
+    1 --0--&gt; P
+    P --0,1--&gt; P
+</div></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h6 class="mume-header" id="-ex10"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Exercice&#xA0;10</mtext></mstyle></mrow><annotation encoding="application/x-tex">\EX{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Exercice&#xA0;10</span></span></span></span></span></span></span></h6>
+
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mo>&#x2217;</mo><mo stretchy="false">!</mo><mi>b</mi><mi>b</mi><mi>a</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">{L}=*!bbaa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal">L</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">&#x2217;</span><span class="mclose">!</span><span class="mord mathnormal">bbaa</span></span></span></span></p>
+<div class="admonition quote">
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((1))
+    2((2))
+    3((3))
+
+    ENTREE[ ] --&gt; 0
+    4(((4)))
+
+
+    0 --a,b--&gt; 0
+    0 --b--&gt; 1
+    1 --b--&gt; 2
+    2 --a--&gt; 3
+    3 --a--&gt; 4
+</div></div>
+<p>on determinise :</p>
 <table>
 <thead>
 <tr>
@@ -1677,75 +1874,472 @@ Nous &#xE9;tudieront donc que les sous-questions <span class="katex"><span class
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">/</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">E/S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">.</td>
-<td style="text-align:center">1, 2</td>
-</tr>
 <tr>
 <td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0, 2</td>
-<td style="text-align:center">2</td>
-</tr>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">2</td>
 <td style="text-align:center">0</td>
-<td style="text-align:center">.</td>
-</tr>
-</tbody>
-</table>
-<p>Le tableau d&#xE9;terminis&#xE9; donne :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">/</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">E/S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></th>
-<th style="text-align:center">.</th>
-<th style="text-align:center">a</th>
-<th style="text-align:center">b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">/</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">E/S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">0</td>
 <td style="text-align:center">01</td>
-<td style="text-align:center">02</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">02</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">12</td>
-<td style="text-align:center">02</td>
-<td style="text-align:center">2</td>
-</tr>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
-</tr>
-<tr>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
-<td style="text-align:center">12</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
+<td style="text-align:center">01</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">012</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">012</td>
+<td style="text-align:center">03</td>
+<td style="text-align:center">012</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">03</td>
+<td style="text-align:center">04</td>
+<td style="text-align:center">01</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">04</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">01</td>
 </tr>
 </tbody>
 </table>
+<p>Donc le compl&#xE9;mentaire est :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">/</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">E/S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></th>
+<th style="text-align:center">.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">01</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">01</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">012</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">012</td>
+<td style="text-align:center">03</td>
+<td style="text-align:center">012</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">03</td>
+<td style="text-align:center">04</td>
+<td style="text-align:center">01</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">04</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">01</td>
+</tr>
+</tbody>
+</table>
+<p>apr&#xE8;s simplification:<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&#x2192;</mo><mn>0</mn><mspace linebreak="newline"></mspace><mn>01</mn><mo>&#x2192;</mo><mn>1</mn><mspace linebreak="newline"></mspace><mn>012</mn><mo>&#x2192;</mo><mn>2</mn><mspace linebreak="newline"></mspace><mn>03</mn><mo>&#x2192;</mo><mn>3</mn><mspace linebreak="newline"></mspace><mn>04</mn><mo>&#x2192;</mo><mn>4</mn><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">0 \rarr 0\\
+01 \rarr 1\\
+012 \rarr 2\\
+03 \rarr 3\\
+04 \rarr 4\\</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">012</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">03</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">04</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span><span class="mspace newline"></span></span></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">/</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">E/S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></th>
+<th style="text-align:center">.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition quote">
+<p class="admonition-title">Automate compl&#xE9;mentaire</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    0((0))
+    1((1))
+    2((2))
+    3((3))
+    4((4))
+
+    ENTREE[ ] --&gt; 0
+    1(((1)))
+    2(((2)))
+    3(((3)))
+
+
+    0 --a--&gt; 0
+    0 --b--&gt; 1
+    
+    1 --a--&gt; 0
+    1 --b--&gt; 2
+
+    2 --a--&gt; 3
+    2 --b--&gt; 2
+    
+    3 --a--&gt; 4
+    3 --b--&gt; 1
+
+    4 --a--&gt; 0       
+    4 --b--&gt; 1       
+</div></div>
+<p>Nous minimisons :</p>
+<p><strong>Iteration 1)</strong><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>0</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mi>T</mi><mo separator="true">,</mo><mtext>&#xA0;</mtext><mi>N</mi><mi>T</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_0 = \{T,~NT\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">NT</span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>1</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>2</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>3</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">T = \{0,~1,~2,~3\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mn>4</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">NT = \{4\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">NT</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mclose">}</span></span></span></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC9;tat</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th>.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">NT</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">T</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mn>4</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>3</mn><mo separator="true">,</mo><mtext>&#xA0;I</mtext><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_1 = \{4,~3,~\text{I}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">I</span></span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>I</mtext></mstyle><mo>=</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>1</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\bluet{I} = \{0,~1,~2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">I</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></p>
+<p><strong>Iteration 2)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC9;tat</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th>.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>3</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">3</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">T</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mn>4</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>3</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>2</mn><mo separator="true">,</mo><mtext>&#xA0;II</mtext><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_2 = \{4,~3,~2,~\text{II}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">II</span></span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle><mo>=</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>1</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\bluet{II} = \{0,~1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">}</span></span></span></span></p>
+<p><strong>Iteration 3)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC9;tat</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th>.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">II</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mn>2</mn></mstyle></mrow><annotation encoding="application/x-tex">\red{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord" style="color:red;">2</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>3</mn></msub><mo>=</mo><msub><mi mathvariant="normal">&#x398;</mi><mrow><mi>f</mi><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><mo stretchy="false">{</mo><mn>4</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>3</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>2</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>1</mn><mo separator="true">,</mo><mtext>&#xA0;</mtext><mn>0</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_3 = \Theta_{fin} = \{4,~3,~2,~1,~0\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">in</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace nobreak">&#xA0;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mclose">}</span></span></span></span></p>
+<p>Il y a que des singletons donc l&#x2019;automate est d&#xE9;j&#xE0; minime</p>
+<hr>
+<h6 class="mume-header" id="-hugetextminimisation"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Minimisation</mtext></mstyle></mrow><annotation encoding="application/x-tex">\huge{\text{Minimisation}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Minimisation</span></span></span></span></span></span></span></h6>
+
+<h4 class="mume-header" id="-exemple-1">Exemple 1</h4>
+
+<p>Iteration 1)</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>0</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mi>T</mi><mo separator="true">,</mo><mi>N</mi><mi>T</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_0 = \{T, NT\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">NT</span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">T = \{1, 2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mn>3</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>5</mn><mo separator="true">,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">NT = \{3, 4, 5, 6\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">NT</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mclose">}</span></span></span></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC9;tat</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th>.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">6</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">NT</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">T</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">NT</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center" colspan="6"></td>
+
+
+
+
+
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">NT</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">T</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">NT</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">NT</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">4</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">NT</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">NT</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>NT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{NT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">NT</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>T</mtext></mstyle></mrow><annotation encoding="application/x-tex">\redt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">T</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>donc<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mstyle mathcolor="green"><mn>12</mn></mstyle><mo separator="true">,</mo><mtext>I</mtext><mo separator="true">,</mo><mtext>II</mtext><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_1 = \{\green{12}, \text{I}, \text{II}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord" style="color:green;">12</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">I</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">II</span></span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>I</mtext></mstyle><mo>=</mo><mo stretchy="false">{</mo><mn>3</mn><mo separator="true">,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\redt{I} = \{3, 6\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">I</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mclose">}</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle><mo>=</mo><mo stretchy="false">{</mo><mn>4</mn><mo separator="true">,</mo><mn>5</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\bluet{II} = \{4, 5\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mclose">}</span></span></span></span></p>
+<p>Iteration 2)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">&#xC9;tat</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th>.</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>I</mtext></mrow><annotation encoding="application/x-tex">\text{I}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">I</span></span></span></span></span></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">II</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>12</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{12}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">12</span></span></span></span></span></td>
+</tr>
+<tr>
+
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">II</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>12</mtext></mstyle></mrow><annotation encoding="application/x-tex">\greent{12}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">12</span></span></span></span></span></td>
+</tr>
+<tr>
+<td colspan="7"></td>
+
+
+
+
+
+
+</tr>
+<tr>
+<td rowspan="2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>II</mtext></mrow><annotation encoding="application/x-tex">\text{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">II</span></span></span></span></span></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>I</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{I}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">I</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span></span></span></span></td>
+</tr>
+<tr>
+
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">4</td>
+<td>.</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>I</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{I}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">I</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#0784b5"><mtext>II</mtext></mstyle></mrow><annotation encoding="application/x-tex">\bluet{II}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">II</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x398;</mi><mn>2</mn></msub><mo>=</mo><msub><mi mathvariant="normal">&#x398;</mi><mrow><mi>f</mi><mi>i</mi><mi>n</mi></mrow></msub><mo>=</mo><mo stretchy="false">{</mo><mn>12</mn><mo separator="true">,</mo><mstyle mathcolor="green"><mtext>36</mtext></mstyle><mo separator="true">,</mo><mstyle mathcolor="#0784b5"><mtext>45</mtext></mstyle><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\Theta_2 = \Theta_{fin} = \{12, \greent{36}, \bluet{45}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord">&#x398;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">in</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">12</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text" style="color:green;"><span class="mord" style="color:green;">36</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text" style="color:#0784b5;"><span class="mord" style="color:#0784b5;">45</span></span><span class="mclose">}</span></span></span></span></p>
+<div class="admonition quote">
+<p class="admonition-title">Automate minimis&#xE9;</p>
+<div class="mermaid">graph LR
+    style ENTREE height:0px;
+
+    12((12))
+    36((36))
+    45((45))
+
+    ENTREE[ ] --&gt; 12
+    12(((12)))
+
+
+    12 --a--&gt; 12
+    12 --b--&gt; 36
+    36 --b--&gt; 12
+    36 --a--&gt; 45
+    45 --a--&gt; 36
+    45 --b--&gt; 45
+</div></div>
+<h4 class="mume-header" id="-exemple-2">Exemple 2</h4>
+
+<p>&#x2026;</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h6 class="mume-header" id="-ex11"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Exercice&#xA0;11</mtext></mstyle></mrow><annotation encoding="application/x-tex">\EX{11}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Exercice&#xA0;11</span></span></span></span></span></span></span></h6>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h6 class="mume-header" id="-ex12"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="2.074em"><mtext>Exercice&#xA0;12</mtext></mstyle></mrow><annotation encoding="application/x-tex">\EX{12}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord sizing reset-size6 size10"><span class="mord text"><span class="mord">Exercice&#xA0;12</span></span></span></span></span></span></span></h6>
+
 
       </div>
       <div class="md-sidebar-toc">
